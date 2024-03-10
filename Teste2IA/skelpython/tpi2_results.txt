@@ -1,0 +1,99 @@
+Added: decl(Descartes,subtype(human,mammal))
+Added: decl(Descartes,member(Socrates,man))
+Added: decl(Descartes,member(Aristoteles,man))
+Added: decl(Descartes,member(Plato,man))
+Added: decl(Descartes,teacher(Socrates,Philosophy))
+Added: decl(Descartes,teacher(Socrates,Mathematics))
+Added: decl(Descartes,teacher(Plato,Philosophy))
+Added: decl(Darwin,subtype(man,human))
+Added: decl(Darwin,breastfeed(mammal,Yes))
+Added: decl(Darwin,likes(man,meat))
+Added: decl(Darwin,subtype(mammal,vertebrate))
+Added: decl(Yesao,teacher(Socrates,Mathematics))
+Added: decl(Yesao,teacher(Plato,Philosophy))
+Added: decl(Damasio,likes(philosopher,Philosophy))
+{'Descartes': {('human', 'subtype'): 'mammal', ('Socrates', 'member'): 'man', ('Aristoteles', 'member'): 'man', ('Plato', 'member'): 'man', ('Socrates', 'teacher'): {'Mathematics', 'Philosophy'}, ('Plato', 'teacher'): {'Philosophy'}}, 'Darwin': {('man', 'subtype'): 'human', ('mammal', 'breastfeed'): {'Yes'}, ('man', 'likes'): {'meat'}, ('mammal', 'subtype'): 'vertebrate'}, 'Yesao': {('Socrates', 'teacher'): {'Mathematics'}, ('Plato', 'teacher'): {'Philosophy'}}, 'Damasio': {('philosopher', 'likes'): {'Philosophy'}}} 
+
+decl(Descartes,subtype(human,mammal))
+decl(Descartes,member(Socrates,man))
+decl(Descartes,member(Aristoteles,man))
+decl(Descartes,member(Plato,man))
+decl(Descartes,teacher(Socrates,Mathematics))
+decl(Descartes,teacher(Socrates,Philosophy))
+decl(Descartes,teacher(Plato,Philosophy))
+decl(Darwin,subtype(man,human))
+decl(Darwin,breastfeed(mammal,Yes))
+decl(Darwin,likes(man,meat))
+decl(Darwin,subtype(mammal,vertebrate))
+decl(Yesao,teacher(Socrates,Mathematics))
+decl(Yesao,teacher(Plato,Philosophy))
+decl(Damasio,likes(philosopher,Philosophy))
+
+subtypes of man: [] 
+
+instances of man: [decl(Descartes,member(Socrates,man)), decl(Descartes,member(Aristoteles,man)), decl(Descartes,member(Plato,man))] 
+
+decl(Descartes,member(Socrates,man))
+decl(Descartes,teacher(Socrates,Mathematics))
+decl(Descartes,teacher(Socrates,Philosophy))
+decl(Yesao,teacher(Socrates,Mathematics))
+
+likes: [decl(Darwin,likes(man,meat)), decl(Damasio,likes(philosopher,Philosophy))] 
+
+Socrates-likes: [decl(Darwin,likes(man,meat))] 
+
+Socrates: [decl(Descartes,teacher(Socrates,Mathematics)), decl(Descartes,teacher(Socrates,Philosophy)), decl(Yesao,teacher(Socrates,Mathematics)), decl(Darwin,likes(man,meat)), decl(Darwin,breastfeed(mammal,Yes))] 
+
+Socrates-subtype: [] 
+
+{('teacher', 'Descartes'): ({'man': 1.0}, {})} 
+
+Added: decl(Descartes,member(Philosophy,discipline))
+{('teacher', 'Descartes'): ({'man': 1.0}, {'discipline': 0.6666666666666666})} 
+
+Added: decl(Descartes,subtype(man,human))
+{('teacher', 'Descartes'): ({'human': 1.0, 'mammal': 1.0, 'man': 1.0}, {'discipline': 0.6666666666666666})} 
+
+Added: decl(Descartes,member(Elvira,woman))
+Added: decl(Descartes,teacher(Elvira,Philosophy))
+{('teacher', 'Descartes'): ({'human': 0.75, 'woman': 0.25, 'mammal': 0.75, 'man': 0.75}, {'discipline': 0.75})} 
+
+Added: decl(Descartes,subtype(woman,human))
+Elvira: [decl(Darwin,breastfeed(mammal,Yes))] 
+
+{('teacher', 'Descartes'): ({'human': 1.0, 'woman': 0.25, 'mammal': 1.0, 'man': 0.75}, {'discipline': 0.75})} 
+
+{('teacher', 'Descartes'): ({'human': 1.0, 'woman': 0.25, 'mammal': 1.0, 'man': 0.75}, {'discipline': 0.75}), ('teacher', None): ({'mammal': 1.0, 'woman': 0.16666666666666666, 'vertebrate': 1.0, 'human': 1.0, 'man': 0.8333333333333334}, {'discipline': 0.7387961250362586})} 
+
+Added: decl(Darwin,hasMother(Mary,Elvira))
+Added: decl(Darwin,hasMother(Elvira,Eva))
+hasMother: [decl(Darwin,hasMother(Mary,Elvira)), decl(Darwin,hasMother(Elvira,Eva))]
+({}, {}) 
+
+({'human': 0.5, 'woman': 0.5, 'mammal': 0.5, 'vertebrate': 0.5}, {'human': 0.5, 'woman': 0.5, 'mammal': 0.5, 'vertebrate': 0.5}) 
+
+Added: decl(Darwin,hasMother(human,woman))
+({'human': 0.5, 'woman': 0.5, 'mammal': 0.5, 'vertebrate': 0.5}, {'human': 0.5, 'woman': 0.5, 'mammal': 0.5, 'vertebrate': 0.5}) 
+
+{'T': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'W': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'O': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'U': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'R': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 'F': [0, 1], 'X1': [0, 1], 'X2': [0, 1], 'orx1': [(0, 0, 0), (1, 2, 0), (2, 4, 0), (3, 6, 0), (4, 8, 0), (5, 0, 1), (6, 2, 1), (7, 4, 1), (8, 6, 1), (9, 8, 1)], 'wx1ux2': [(0, 0, 0, 0), (0, 1, 1, 0), (1, 0, 2, 0), (1, 1, 3, 0), (2, 0, 4, 0), (2, 1, 5, 0), (3, 0, 6, 0), (3, 1, 7, 0), (4, 0, 8, 0), (4, 1, 9, 0), (5, 0, 0, 1), (5, 1, 1, 1), (6, 0, 2, 1), (6, 1, 3, 1), (7, 0, 4, 1), (7, 1, 5, 1), (8, 0, 6, 1), (8, 1, 7, 1), (9, 0, 8, 1), (9, 1, 9, 1)], 'tx2of': [(0, 0, 0, 0), (0, 1, 1, 0), (1, 0, 2, 0), (1, 1, 3, 0), (2, 0, 4, 0), (2, 1, 5, 0), (3, 0, 6, 0), (3, 1, 7, 0), (4, 0, 8, 0), (4, 1, 9, 0), (5, 0, 0, 1), (5, 1, 1, 1), (6, 0, 2, 1), (6, 1, 3, 1), (7, 0, 4, 1), (7, 1, 5, 1), (8, 0, 6, 1), (8, 1, 7, 1), (9, 0, 8, 1), (9, 1, 9, 1)]}
+{('T', 'W'): <function <dictcomp>.<lambda> at 0x7fcef3580b80>, ('T', 'O'): <function <dictcomp>.<lambda> at 0x7fcef3580c10>, ('T', 'F'): <function <dictcomp>.<lambda> at 0x7fcef3580ca0>, ('T', 'U'): <function <dictcomp>.<lambda> at 0x7fcef3580d30>, ('T', 'R'): <function <dictcomp>.<lambda> at 0x7fcef3580dc0>, ('W', 'T'): <function <dictcomp>.<lambda> at 0x7fcef3580e50>, ('W', 'O'): <function <dictcomp>.<lambda> at 0x7fcef3580ee0>, ('W', 'F'): <function <dictcomp>.<lambda> at 0x7fcef3580f70>, ('W', 'U'): <function <dictcomp>.<lambda> at 0x7fcef3581000>, ('W', 'R'): <function <dictcomp>.<lambda> at 0x7fcef3581090>, ('O', 'T'): <function <dictcomp>.<lambda> at 0x7fcef3581120>, ('O', 'W'): <function <dictcomp>.<lambda> at 0x7fcef35811b0>, ('O', 'F'): <function <dictcomp>.<lambda> at 0x7fcef3581240>, ('O', 'U'): <function <dictcomp>.<lambda> at 0x7fcef35812d0>, ('O', 'R'): <function <dictcomp>.<lambda> at 0x7fcef3581360>, ('F', 'T'): <function <dictcomp>.<lambda> at 0x7fcef35813f0>, ('F', 'W'): <function <dictcomp>.<lambda> at 0x7fcef3581480>, ('F', 'O'): <function <dictcomp>.<lambda> at 0x7fcef3581510>, ('F', 'U'): <function <dictcomp>.<lambda> at 0x7fcef35815a0>, ('F', 'R'): <function <dictcomp>.<lambda> at 0x7fcef3581630>, ('U', 'T'): <function <dictcomp>.<lambda> at 0x7fcef35816c0>, ('U', 'W'): <function <dictcomp>.<lambda> at 0x7fcef3581750>, ('U', 'O'): <function <dictcomp>.<lambda> at 0x7fcef35817e0>, ('U', 'F'): <function <dictcomp>.<lambda> at 0x7fcef3581870>, ('U', 'R'): <function <dictcomp>.<lambda> at 0x7fcef3581900>, ('R', 'T'): <function <dictcomp>.<lambda> at 0x7fcef3581990>, ('R', 'W'): <function <dictcomp>.<lambda> at 0x7fcef3581a20>, ('R', 'O'): <function <dictcomp>.<lambda> at 0x7fcef3581ab0>, ('R', 'F'): <function <dictcomp>.<lambda> at 0x7fcef3581b40>, ('R', 'U'): <function <dictcomp>.<lambda> at 0x7fcef3581bd0>, ('orx1', 'O'): <function <lambda> at 0x7fcef3580af0>, ('orx1', 'R'): <function <lambda> at 0x7fcef3581c60>, ('orx1', 'X1'): <function <lambda> at 0x7fcef3581cf0>, ('wx1ux2', 'W'): <function <lambda> at 0x7fcef3580af0>, ('wx1ux2', 'X1'): <function <lambda> at 0x7fcef3581c60>, ('wx1ux2', 'U'): <function <lambda> at 0x7fcef3581cf0>, ('wx1ux2', 'X2'): <function <lambda> at 0x7fcef3581d80>, ('tx2of', 'T'): <function <lambda> at 0x7fcef3580af0>, ('tx2of', 'X2'): <function <lambda> at 0x7fcef3581c60>, ('tx2of', 'O'): <function <lambda> at 0x7fcef3581cf0>, ('tx2of', 'F'): <function <lambda> at 0x7fcef3581d80>, ('O', 'orx1'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3581f30>, ('R', 'orx1'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3581fc0>, ('X1', 'orx1'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3582050>, ('W', 'wx1ux2'): <function invert_constraint.<locals>.<lambda> at 0x7fcef35820e0>, ('X1', 'wx1ux2'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3582170>, ('U', 'wx1ux2'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3582200>, ('X2', 'wx1ux2'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3582290>, ('T', 'tx2of'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3582320>, ('X2', 'tx2of'): <function invert_constraint.<locals>.<lambda> at 0x7fcef35823b0>, ('O', 'tx2of'): <function invert_constraint.<locals>.<lambda> at 0x7fcef3582440>, ('F', 'tx2of'): <function invert_constraint.<locals>.<lambda> at 0x7fcef35824d0>}
+{'T': 1, 'W': 3, 'O': 2, 'F': 0, 'U': 6, 'R': 4}
+{'T': 1, 'W': 7, 'O': 3, 'F': 0, 'U': 4, 'R': 6}
+{'T': 1, 'W': 9, 'O': 3, 'F': 0, 'U': 8, 'R': 6}
+{'T': 2, 'W': 3, 'O': 4, 'F': 0, 'U': 6, 'R': 8}
+{'T': 3, 'W': 4, 'O': 6, 'F': 0, 'U': 9, 'R': 2}
+{'T': 3, 'W': 5, 'O': 7, 'F': 0, 'U': 1, 'R': 4}
+{'T': 4, 'W': 1, 'O': 8, 'F': 0, 'U': 3, 'R': 6}
+{'T': 4, 'W': 2, 'O': 8, 'F': 0, 'U': 5, 'R': 6}
+{'T': 4, 'W': 3, 'O': 8, 'F': 0, 'U': 7, 'R': 6}
+{'T': 4, 'W': 5, 'O': 9, 'F': 0, 'U': 1, 'R': 8}
+{'T': 4, 'W': 6, 'O': 9, 'F': 0, 'U': 3, 'R': 8}
+{'T': 4, 'W': 7, 'O': 9, 'F': 0, 'U': 5, 'R': 8}
+{'T': 7, 'W': 3, 'O': 4, 'F': 1, 'U': 6, 'R': 8}
+{'T': 8, 'W': 3, 'O': 6, 'F': 1, 'U': 7, 'R': 2}
+{'T': 8, 'W': 4, 'O': 6, 'F': 1, 'U': 9, 'R': 2}
+{'T': 9, 'W': 2, 'O': 8, 'F': 1, 'U': 5, 'R': 6}
+{'T': 9, 'W': 3, 'O': 8, 'F': 1, 'U': 7, 'R': 6}
+{'T': 7, 'W': 6, 'O': 5, 'F': 1, 'U': 3, 'R': 0}
+{'T': 8, 'W': 6, 'O': 7, 'F': 1, 'U': 3, 'R': 4}
+19
